@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unnimaya Manoj | Content Creator & Scriptwriter</title>
+  <meta name="description" content="Portfolio of Unnimaya Manoj – Multi-platform Content Creator & Scriptwriter from Kerala. Open to opportunities." />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: {
+              900: '#0a0a0b',
+              800: '#121214',
+              700: '#1a1a1e',
+              600: '#222228',
+            },
+            coral: {
+              400: '#ff6b6b',
+              500: '#ff5252',
+              600: '#e63946',
+            },
+            teal: {
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    html { scroll-behavior: smooth; }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #ff6b6b 0%, #2dd4bf 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px -12px rgba(255, 82, 82, 0.15);
+    }
+    
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #ff6b6b, #2dd4bf);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .hero-glow {
+      background: radial-gradient(ellipse at 50% 0%, rgba(255, 82, 82, 0.12) 0%, transparent 60%);
+    }
+  </style>
+</head>
+<body class="bg-dark-900 text-gray-100 font-sans antialiased">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-900/80 backdrop-blur-lg border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="font-display text-xl font-bold tracking-tight">
+        Unnimaya<span class="text-coral-500">.</span>
+      </a>
+      
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+        <a href="#about" class="nav-link hover:text-white transition">About</a>
+        <a href="#work" class="nav-link hover:text-white transition">Work</a>
+        <a href="#skills" class="nav-link hover:text-white transition">Skills</a>
+        <a href="#contact" class="nav-link hover:text-white transition">Contact</a>
+      </div>
+      
+      <a href="#contact" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-coral-500 to-teal-500 text-white text-sm font-semibold hover:opacity-90 transition">
+        Get in Touch
+      </a>
+      
+      <!-- Mobile menu button -->
+      <button id="menuBtn" class="md:hidden p-2 text-gray-300 hover:text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-dark-800 border-t border-white/5">
+      <div class="px-6 py-4 flex flex-col gap-4 text-sm font-medium">
+        <a href="#about" class="py-2 hover:text-coral-400">About</a>
+        <a href="#work" class="py-2 hover:text-coral-400">Work</a>
+        <a href="#skills" class="py-2 hover:text-coral-400">Skills</a>
+        <a href="#contact" class="py-2 hover:text-coral-400">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="relative min-h-screen flex items-center hero-glow pt-20">
+    <div class="max-w-6xl mx-auto px-6 py-20 w-full">
+      <div class="max-w-3xl">
+        <p class="text-teal-400 font-medium mb-4 tracking-wide">Content Creator & Scriptwriter</p>
+        
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+          Hi, I’m <span class="gradient-text">Unnimaya</span>
+        </h1>
+        
+        <p class="text-xl text-gray-300 leading-relaxed mb-8 max-w-2xl">
+          Multi-platform content creator and scriptwriter from Kerala.  
+          I craft stories, campaigns and scripts that connect brands with audiences across Instagram, YouTube, Facebook and the web.
+        </p>
+        
+        <div class="flex flex-wrap gap-4">
+          <a href="#work" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-coral-500 to-teal-500 text-white font-semibold hover:opacity-90 transition shadow-lg shadow-coral-500/20">
+            View My Work
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+          <a href="#contact" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-white/20 text-white font-semibold hover:bg-white/5 transition">
+            Open to Opportunities
+          </a>
+        </div>
+        
+        <!-- Social links -->
+        <div class="mt-12 flex items-center gap-6">
+          <a href="https://www.instagram.com/_kalyaaani_/" target="_blank" rel="noopener" class="text-gray-400 hover:text-coral-400 transition" aria-label="Instagram">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+          <a href="#contact" class="text-gray-400 hover:text-teal-400 transition text-sm font-medium">
+            Let’s connect →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="py-24 bg-dark-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-teal-400 font-medium mb-3 tracking-wide">About Me</p>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
+            Turning ideas into <span class="gradient-text">stories that stick</span>
+          </h2>
+          
+          <div class="space-y-4 text-gray-300 leading-relaxed">
+            <p>
+              I’m Unnimaya Manoj, a content creator and scriptwriter based in Kerala. Over the years I’ve worked with multiple companies, creating content that lives across Instagram, Facebook, YouTube and websites.
+            </p>
+            <p>
+              My strength lies in crafting both creative scripts and marketing-driven copy — the kind that captures attention and drives action. Whether it’s a social media campaign, a brand film script, or website content, I focus on clarity, emotion and results.
+            </p>
+            <p>
+              I’m currently open to new opportunities where I can bring storytelling and strategic content thinking to a team that values creativity and impact.
+            </p>
+          </div>
+          
+          <div class="mt-8 flex flex-wrap gap-3">
+            <span class="px-4 py-1.5 rounded-full bg-dark-700 text-sm text-gray-300 border border-white/5">Content Strategy</span>
+            <span class="px-4 py-1.5 rounded-full bg-dark-700 text-sm text-gray-300 border border-white/5">Creative Scripts</span>
+            <span class="px-4 py-1.5 rounded-full bg-dark-700 text-sm text-gray-300 border border-white/5">Marketing Copy</span>
+            <span class="px-4 py-1.5 rounded-full bg-dark-700 text-sm text-gray-300 border border-white/5">Multi-platform</span>
+          </div>
+        </div>
+        
+        <!-- Stats / Highlights -->
+        <div class="grid grid-cols-2 gap-5">
+          <div class="p-6 rounded-2xl bg-dark-700 border border-white/5">
+            <p class="text-3xl font-display font-bold text-coral-400 mb-1">Multi</p>
+            <p class="text-sm text-gray-400">Platform Experience</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-dark-700 border border-white/5">
+            <p class="text-3xl font-display font-bold text-teal-400 mb-1">Scripts</p>
+            <p class="text-sm text-gray-400">Creative + Marketing</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-dark-700 border border-white/5">
+            <p class="text-3xl font-display font-bold text-coral-400 mb-1">Kerala</p>
+            <p class="text-sm text-gray-400">Based & Worked With</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-dark-700 border border-white/5">
+            <p class="text-3xl font-display font-bold text-teal-400 mb-1">Open</p>
+            <p class="text-sm text-gray-400">To New Roles</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED WORK ========== -->
+  <section id="work" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-teal-400 font-medium mb-3 tracking-wide">Portfolio</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">
+          Featured <span class="gradient-text">Work</span>
+        </h2>
+        <p class="text-gray-400 max-w-xl mx-auto">
+          A selection of content and scripts created for brands and platforms. Replace these with your real projects.
+        </p>
+      </div>
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Project 1 -->
+        <article class="card-hover group rounded-2xl overflow-hidden bg-dark-800 border border-white/5">
+          <div class="aspect-[4/3] bg-gradient-to-br from-coral-500/20 to-dark-700 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent"></div>
+            <span class="relative z-10 text-4xl font-display font-bold text-white/30">01</span>
+          </div>
+          <div class="p-6">
+            <p class="text-xs font-medium text-teal-400 mb-2 uppercase tracking-wider">Instagram • Campaign</p>
+            <h3 class="font-display text-lg font-semibold mb-2 group-hover:text-coral-400 transition">Brand Story Series</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Creative scripts and visual content for a multi-post Instagram campaign that increased engagement.
+            </p>
+          </div>
+        </article>
+        
+        <!-- Project 2 -->
+        <article class="card-hover group rounded-2xl overflow-hidden bg-dark-800 border border-white/5">
+          <div class="aspect-[4/3] bg-gradient-to-br from-teal-500/20 to-dark-700 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent"></div>
+            <span class="relative z-10 text-4xl font-display font-bold text-white/30">02</span>
+          </div>
+          <div class="p-6">
+            <p class="text-xs font-medium text-coral-400 mb-2 uppercase tracking-wider">YouTube • Script</p>
+            <h3 class="font-display text-lg font-semibold mb-2 group-hover:text-coral-400 transition">Product Launch Video</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Full creative script for a product launch video — from hook to call-to-action.
+            </p>
+          </div>
+        </article>
+        
+        <!-- Project 3 -->
+        <article class="card-hover group rounded-2xl overflow-hidden bg-dark-800 border border-white/5">
+          <div class="aspect-[4/3] bg-gradient-to-br from-coral-500/20 via-teal-500/10 to-dark-700 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent"></div>
+            <span class="relative z-10 text-4xl font-display font-bold text-white/30">03</span>
+          </div>
+          <div class="p-6">
+            <p class="text-xs font-medium text-teal-400 mb-2 uppercase tracking-wider">Website • Copy</p>
+            <h3 class="font-display text-lg font-semibold mb-2 group-hover:text-coral-400 transition">Landing Page Content</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Marketing-focused website copy that converted visitors into leads.
+            </p>
+          </div>
+        </article>
+        
+        <!-- Project 4 -->
+        <article class="card-hover group rounded-2xl overflow-hidden bg-dark-800 border border-white/5">
+          <div class="aspect-[4/3] bg-gradient-to-br from-teal-500/20 to-dark-700 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent"></div>
+            <span class="relative z-10 text-4xl font-display font-bold text-white/30">04</span>
+          </div>
+          <div class="p-6">
+            <p class="text-xs font-medium text-coral-400 mb-2 uppercase tracking-wider">Facebook • Campaign</p>
+            <h3 class="font-display text-lg font-semibold mb-2 group-hover:text-coral-400 transition">Awareness Series</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Multi-post Facebook content strategy with strong narrative flow.
+            </p>
+          </div>
+        </article>
+        
+        <!-- Project 5 -->
+        <article class="card-hover group rounded-2xl overflow-hidden bg-dark-800 border border-white/5">
+          <div class="aspect-[4/3] bg-gradient-to-br from-coral-500/20 to-dark-700 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent"></div>
+            <span class="relative z-10 text-4xl font-display font-bold text-white/30">05</span>
+          </div>
+          <div class="p-6">
+            <p class="text-xs font-medium text-teal-400 mb-2 uppercase tracking-wider">Scriptwriting</p>
+            <h3 class="font-display text-lg font-semibold mb-2 group-hover:text-coral-400 transition">Creative Ad Scripts</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Short-form creative scripts designed for high retention and shareability.
+            </p>
+          </div>
+        </article>
+        
+        <!-- Project 6 -->
+        <article class="card-hover group rounded-2xl overflow-hidden bg-dark-800 border border-white/5">
+          <div class="aspect-[4/3] bg-gradient-to-br from-teal-500/20 via-coral-500/10 to-dark-700 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent"></div>
+            <span class="relative z-10 text-4xl font-display font-bold text-white/30">06</span>
+          </div>
+          <div class="p-6">
+            <p class="text-xs font-medium text-coral-400 mb-2 uppercase tracking-wider">Multi-platform</p>
+            <h3 class="font-display text-lg font-semibold mb-2 group-hover:text-coral-400 transition">Integrated Campaign</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              End-to-end content for Instagram, Facebook and website in one cohesive campaign.
+            </p>
+          </div>
+        </article>
+        
+      </div>
+      
+      <p class="text-center text-sm text-gray-500 mt-10">
+        * These are placeholder projects. Replace with real work samples, screenshots or links.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section id="skills" class="py-24 bg-dark-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-teal-400 font-medium mb-3 tracking-wide">Expertise</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold">
+          What I Bring to the <span class="gradient-text">Table</span>
+        </h2>
+      </div>
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="p-7 rounded-2xl bg-dark-700 border border-white/5 hover:border-coral-500/30 transition">
+          <div class="w-12 h-12 rounded-xl bg-coral-500/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-coral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-2">Creative Scriptwriting</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Engaging scripts for videos, reels and campaigns that hold attention and tell a clear story.
+          </p>
+        </div>
+        
+        <div class="p-7 rounded-2xl bg-dark-700 border border-white/5 hover:border-teal-500/30 transition">
+          <div class="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-2">Marketing Copy</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Conversion-focused writing for ads, landing pages and social posts that drive action.
+          </p>
+        </div>
+        
+        <div class="p-7 rounded-2xl bg-dark-700 border border-white/5 hover:border-coral-500/30 transition">
+          <div class="w-12 h-12 rounded-xl bg-coral-500/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-coral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-2">Multi-platform Content</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Content tailored for Instagram, Facebook, YouTube and websites — adapted to each platform’s language.
+          </p>
+        </div>
+        
+        <div class="p-7 rounded-2xl bg-dark-700 border border-white/5 hover:border-teal-500/30 transition">
+          <div class="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-2">Content Strategy</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Planning campaigns with clear goals, audience understanding and measurable outcomes.
+          </p>
+        </div>
+        
+        <div class="p-7 rounded-2xl bg-dark-700 border border-white/5 hover:border-coral-500/30 transition">
+          <div class="w-12 h-12 rounded-xl bg-coral-500/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-coral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-2">Brand Collaboration</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Experience working with companies in Kerala — understanding brand voice and delivering on brief.
+          </p>
+        </div>
+        
+        <div class="p-7 rounded-2xl bg-dark-700 border border-white/5 hover:border-teal-500/30 transition">
+          <div class="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-2">Social-first Thinking</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Content designed for how people actually consume it on social platforms — fast, visual and emotional.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="py-24">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-teal-400 font-medium mb-3 tracking-wide">Contact</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">
+        Let’s create something <span class="gradient-text">great</span>
+      </h2>
+      <p class="text-gray-300 text-lg mb-10 max-w-xl mx-auto">
+        I’m currently open to full-time roles, freelance projects and collaborations.  
+        If you’re looking for a content creator and scriptwriter who understands both creativity and results, I’d love to hear from you.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <a href="mailto:hello@unnimaya.com" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-coral-500 to-teal-500 text-white font-semibold hover:opacity-90 transition shadow-lg shadow-coral-500/20">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          Send me an email
+        </a>
+        <a href="https://www.instagram.com/_kalyaaani_/" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-white/20 text-white font-semibold hover:bg-white/5 transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+          </svg>
+          Instagram
+        </a>
+      </div>
+      
+      <p class="text-sm text-gray-500">
+        Replace the email above with her real email address.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="border-t border-white/5 py-10">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-gray-500">
+        © 2026 Unnimaya Manoj. All rights reserved.
+      </p>
+      <p class="text-sm text-gray-500">
+        Designed for impact. Built for opportunities.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Simple mobile menu toggle -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
